@@ -75,10 +75,13 @@ lib_deps =
     me-no-dev/AsyncTCP
     me-no-dev/ESP Async WebServer
     bodmer/TJpg_Decoder
+git
 
+---
 
-🧠 Source Structure
+## 🧠 Source Structure
 
+```
 src/
  ├── main.cpp              → Setup, loop, and initialization
  ├── game.cpp/.h           → Core snake logic and scoring
@@ -92,15 +95,20 @@ src/
 data/
  ├── index.html, script.js, style.css → Web dashboard assets
 platformio.ini             → Build environment
+```        → Build environment
 
 
-🌐 Web Control & Voice Console
+---
+
+## 🌐 Web Control & Voice Console
 
 1. Connect ESP32 to Wi-Fi (SSID/PASS configured in `web_control.cpp`).
 2. After boot, open the **Serial Monitor (115200 baud)** to see the local IP.
 3. Open `http://<your-esp32-ip>/` to access the dashboard.
 4. Use on-screen buttons, IR remote, or microphone input to control the snake.
 5. Voice input is processed via a browser and sent to ESP32 through WebSocket.
+
+---
 
 ## 🛡️ Cloudflare Tunnel (Secure HTTPS Access)
 
