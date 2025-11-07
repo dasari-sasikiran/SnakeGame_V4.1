@@ -75,7 +75,7 @@ lib_deps =
     me-no-dev/AsyncTCP
     me-no-dev/ESP Async WebServer
     bodmer/TJpg_Decoder
-git
+````
 
 ---
 
@@ -95,8 +95,7 @@ src/
 data/
  ├── index.html, script.js, style.css → Web dashboard assets
 platformio.ini             → Build environment
-```        → Build environment
-
+```
 
 ---
 
@@ -201,25 +200,25 @@ https://snakegame.yourdomain.com
    ```
 5. Upload web assets to SPIFFS:
 
-   bash
+   ```bash
    pio run -t uploadfs
-
+   ```
 6. Open Serial Monitor (`115200 baud`) to view IP and logs.
 7. Open browser at displayed IP or via your Cloudflare HTTPS URL.
 
+---
 
 ## 🧾 Notes
 
 * Voice inference model: `snake-voice-console_inferencing.h`
 * Supports **IR**, **Web**, and **Voice** control simultaneously.
 * Designed for **ESP32-D0WDQ6-V3** or equivalent.
-* Mask Wi-Fi credentials before public release.
-* Recommended to remove `.pio/` build directory before sharing.
 
+---
 
 ## 🏁 Authors
 
 **Developed by:**
 
-* DASARI SASIKIRAN
+* Kiran DS
 * R&D and System Guidance by ChatGPT
