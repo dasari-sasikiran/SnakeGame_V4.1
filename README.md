@@ -220,5 +220,5 @@ https://snakegame.yourdomain.com
 
 **Developed by:**
 
-* Kiran DS
+* DASARI SASIKIRAN
 * R&D and System Guidance by ChatGPT
