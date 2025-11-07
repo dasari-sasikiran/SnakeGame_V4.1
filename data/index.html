@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Game console</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1 class="game-title">SnakeGame WebControl</h1>
+    </header>
+
+    <main class="console" role="application" aria-label="Gaming console">
+      <!-- D-Pad -->
+      <section class="dpad" aria-label="Directional pad">
+        <button id="btn-up" class="btn dpad-btn up" aria-label="Up">▲</button>
+        <div class="row">
+          <button id="btn-left" class="btn dpad-btn left" aria-label="Left">◀</button>
+          <!-- 🎤 Voice button in middle (existing id) -->
+          <button id="btn-voice" class="btn dpad-btn voice" aria-label="Voice">🎤</button>
+          <button id="btn-right" class="btn dpad-btn right" aria-label="Right">▶</button>
+        </div>
+        <button id="btn-down" class="btn dpad-btn down" aria-label="Down">▼</button>
+
+        <!-- 📝 Event log & voice UI -->
+        <div id="event-log" class="event-log" aria-live="polite">
+          <div style="margin-bottom:6px;">
+            <span id="micStatus" style="font-size:13px;color:#94a3b8;">Ready</span>
+          </div>
+          <div style="font-size:13px;color:#d8eefc;margin-bottom:6px;">
+            <strong>Last recognized:</strong>
+            <div id="recognizedText" style="margin-top:6px;">—</div>
+          </div>
+
+          <div id="logArea" style="max-height:120px; overflow:auto; color:#94a3b8; font-size:13px;">
+            <!-- JS will prepend log entries here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Controls -->
+      <section class="controls" aria-label="Controls">
+        <button id="btn-pause" class="btn control-btn" aria-pressed="false" aria-label="Pause Play">⏯</button>
+        <button id="btn-restart" class="btn control-btn" aria-label="Restart">🔄</button>
+        <button id="btn-mute" class="btn control-btn" aria-pressed="false" aria-label="Mute">🔇</button>
+      </section>
+    </main>
+
+    <footer class="status">
+      <div id="ws-status">WebSocket: <span id="ws-indicator">Disconnected</span></div>
+      <div id="last-action">Last: <span id="last-text">—</span></div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+
+
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

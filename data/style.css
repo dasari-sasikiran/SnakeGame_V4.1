@@ -1,0 +1,91 @@
+:root {
+  --bg: #071022;
+  --panel: #0b1220;
+  --accent: #7dd3fc;
+  --muted: #94a3b8;
+  --btn-bg: linear-gradient(180deg, #1f2937, #111827);
+  --btn-hover: #3b82f6;
+  --btn-active: #2563eb;
+}
+
+body {
+  background: linear-gradient(180deg, var(--accent), #1e90ff);
+  color: #e6eef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.console {
+  display: flex;
+  gap: 28px;
+  background: var(--panel);
+  padding: 22px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dpad .row {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  border: none;
+  background: var(--btn-bg);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6), inset 0 -6px 12px rgba(0,0,0,0.4);
+  color: #fff;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.btn:active {
+  background: var(--btn-active);
+  transform: scale(0.95);
+}
+
+.voice {
+  background: linear-gradient(180deg, #059669, #065f46);
+  color: #e0f2fe;
+}
+
+.voice:hover {
+  background: #10b981;
+}
+
+.event-log {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  min-height: 1.2em;
+}
+
+.status {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
